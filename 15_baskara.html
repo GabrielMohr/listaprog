@@ -1,0 +1,37 @@
+<script>
+
+//Calcule as raízes de uma equação do segundo grau, na forma ax2 + bx + c. A função recebe a, b e c e faz as consistências, informando ao usuário nas seguintes situações:
+//- Se o usuário informar o valor de A igual a zero é uma equaçao do 1o grau.
+// - Se o delta calculado for negativo, a equação não possui raízes reais.
+//- Se o delta calculado for igual a zero a equação possui apenas uma raiz real. 
+//- Se o delta for positivo, a equação possui duas raízes reais.
+
+// Abaixo recebemos do usuário o valor do A, B e C.
+
+const a = Number(prompt("INSIRA O VALOR DE a: "))
+const b = Number(prompt("INSIRA O VALOR DE b: "))
+const c = Number(prompt("INSIRA O VALOR DE c: "))
+const delta = (b**2) - (4 * a * c)
+
+if (a === 0) { alert("É UMA EQUAÇÃO DE 1° OU INVÁLIDA, INFORME UM VALOR DE a MAIOR QUE 0!")}
+
+else if (delta < 0) {
+    alert(`NÃO TEM RAIZ POIS O DELTA É NEGATIVO, DELTA = ${delta}`)
+} 
+
+if (delta === 0) {
+    alert(`SÓ TEM UMA RAIZ POIS O DELTA = ${delta}`)
+    const x = b * (-1) / (2 * a)
+    document.write(`X = ${x}`)
+    
+}
+
+else if (delta >0) {
+    alert("A EQUAÇÃO POSSUÍ DUAS RAIZES!")
+    const x1 = (b * (-1) + Math.sqrt(delta)) / (2 * a)
+    document.write(`<br> x¹ = ${x1} </br>`)
+    const x2 = (b * (-1) - Math.sqrt(delta)) / (2 * a)
+    document.write(`<br> x² = ${x2} </br>`)
+}
+    
+</script>

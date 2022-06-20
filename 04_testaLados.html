@@ -1,0 +1,21 @@
+    <script>
+
+//Receba os três lados de um triângulo. Informe se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno. Dica: pesquise sobre a regra para saber se os lados formam um triângulo e também sobre os tipos de triângulos.
+
+const primeiroLado = Number(prompt("INFORME AQUI O PRIMEIRO LADO: "))
+const segundoLado = Number(prompt("INFORME AQUI O SEGUNDO LADO: "))
+const terceiroLado = Number(prompt("INFORME AQUI O TERCEIRO LADO: "))
+
+if (primeiroLado >0 && segundoLado >0 && terceiroLado>0) {document.write("É UM TRIÂNGULO DO TIPO: ")
+    
+} else  {document.write("NÃO É TRIÂNGULO POIS NÃO TEM 3 LADOS! (Informe 3 valores inteiros >0) ")
+    
+} if (primeiroLado >0 && segundoLado >0 && terceiroLado>0 && primeiroLado === segundoLado && primeiroLado === terceiroLado) {document.write("EQUILÁTERO, POIS TEM SEUS LADOS IGUAIS")}
+  
+if (primeiroLado >0 && segundoLado >0 && terceiroLado>0 && primeiroLado === segundoLado && primeiroLado !== terceiroLado || primeiroLado >0 && segundoLado >0 && terceiroLado>0 && segundoLado === terceiroLado && segundoLado !== primeiroLado || primeiroLado >0 && segundoLado >0 && terceiroLado>0 && terceiroLado === primeiroLado && terceiroLado !== segundoLado ) {document.write("ISÓCELES, POIS TEM DOIS LADOS IGUAIS E UM DIFERENTE!")}
+
+if (primeiroLado >0 && segundoLado >0 && terceiroLado>0 && primeiroLado !== segundoLado && primeiroLado !== terceiroLado && segundoLado !== terceiroLado ) {document.write("ESCALENO, POIS TEM TODOS OS LADOS DIFERENTES!")
+    
+}
+
+    </script>

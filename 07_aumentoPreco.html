@@ -1,0 +1,45 @@
+<script>
+
+//Recebe o preço do produto e calcula o aumento do preço, baseado no seguinte critério:- até 280 (inclusive): aumento de 20% - até 700 (inclusive): aumento de 15% - até 1500 (inclusive): aumento de 10% - acima de 1500: aumento de 5% Informe: o preço atual, o percentual de aumento, o valor do aumento e o novo preço, todos com duas casas decimais.
+
+const valorProduto = Number(prompt("INFORME O VALOR DO PRODUTO: "))
+
+const aumentoVintePercentual = valorProduto*0.2 .toFixed(2)
+const aumentoQuinzePercentual = valorProduto*0.15 .toFixed(2)
+const aumentoDezPercentual = valorProduto*0.1 .toFixed(2)
+const aumentoCincoPercentual = valorProduto*0.05 .toFixed(2)
+
+const valorComAumentoVinte = valorProduto + aumentoVintePercentual 
+const valorComAumentoQuinze = valorProduto + aumentoQuinzePercentual
+const valorComAumentoDez = valorProduto + aumentoDezPercentual
+const valorComAumentoCinco = valorProduto + aumentoCincoPercentual
+
+if (valorProduto <=279.99) 
+{document.write(`PREÇO ATUAL: ${valorProduto}$ reais`)
+document.write("PERCENTUAL AUMENTO: 20%")
+document.write(`VALOR DE AUMENTO: ${aumentoVintePercentual}$ reais`)
+document.write(`NOVO PREÇO: ${valorComAumentoVinte}`)
+}
+
+if (valorProduto >=280 && valorProduto <= 699.99 ) 
+{document.write(`PREÇO ATUAL: ${valorProduto}$ reais`)
+document.write("PERCENTUAL AUMENTO: 15%")
+document.write(`VALOR DE AUMENTO: ${aumentoQuinzePercentual}$ reais`)
+document.write(`NOVO PREÇO: ${valorComAumentoQuinze}`)
+}
+
+if (valorProduto >=700 && valorProduto <= 1499.99 ) 
+{document.write(`PREÇO ATUAL: ${valorProduto}$ reais`)
+document.write("PERCENTUAL AUMENTO: 10%")
+document.write(`VALOR DE AUMENTO: ${aumentoDezPercentual}$ reais`)
+document.write(`NOVO PREÇO: ${valorComAumentoDez}`)
+}
+
+if (valorProduto >=1500) 
+{document.write(`PREÇO ATUAL: ${valorProduto}$ reais`)
+document.write("PERCENTUAL AUMENTO: 5%")
+document.write(`VALOR DE AUMENTO: ${aumentoCincoPercentual}$ reais`)
+document.write(`NOVO PREÇO: ${valorComAumentoCinco}`)
+}
+
+</script>
